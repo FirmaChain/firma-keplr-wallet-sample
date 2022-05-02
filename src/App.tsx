@@ -113,10 +113,54 @@ const App = () => {
     }
   };
 
+  const signSomething = async () => {
+
+    const chainId = "colosseum-1";
+
+    try {
+      await window.keplr.enable(chainId);
+
+      const result1 = await window.keplr.getKey(chainId);
+      let address = result1.bech32Address;
+
+      // you can also get address below code.
+
+      //const offlineSigner = window.getOfflineSigner(chainId);
+      //const accounts = await offlineSigner.getAccounts();
+      //const addressBasedAccount = accounts[0].address;
+
+      const rawCertificate = "3936a4db-1d18-4cb6-8274-bccb1541f021";
+
+      let certificateData = "The signature requested by exchange.\n\nProceed to confirm your own ownership of Kepler's wallet.\nPlease proceed after checking the registered wallet address at the time of deposit and withdrawal.\n\nAddress:\n" + address + "\nCertificate:\n" + rawCertificate;
+
+      let signatureResult = await window.keplr.signArbitrary(chainId, address, certificateData);
+      console.log(signatureResult);
+
+      // if you want to modify signatureResult or certificateData, like this.
+      //signatureResult.signature += "1";
+      //certificateData += "1";
+
+      // true or false
+      let isMatched = await window.keplr.verifyArbitrary(chainId, address, certificateData, signatureResult);
+      console.log(isMatched);
+
+      if (isMatched) {
+        alert("Wallet address registration completed.");
+      } else {
+        alert("Wallet address registration failed.");
+      }
+
+    } catch (error) {
+      alert("Wallet address registration failed : " + error);
+    }
+  };
+
   return (
     <MainContainer>
       <Button onClick={openWallet}>Connect Kepler Wallet</Button>
       <Button onClick={getAddress}>getAddress</Button>
+      <Button onClick={signSomething}>Sign Something</Button>
+
     </MainContainer>
   );
 };
