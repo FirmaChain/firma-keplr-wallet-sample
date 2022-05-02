@@ -2,7 +2,7 @@
 
 This project is a sample webpage to support kepler wallet extension for colosseum-1 mainnet on FirmaChain.
 
-<img width="1010" alt="image" src="https://user-images.githubusercontent.com/5277080/163518974-5ce6c68c-e139-459a-a0a3-e329064ee374.png">
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/5277080/166238355-e0e77168-5e11-4271-8900-53ebfa3835d0.png">
 
 
 
@@ -18,6 +18,13 @@ After succeed to connect, you can see firmachain info on the chain selection tab
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5277080/163519146-020818c3-8a4d-4487-9ec4-03922bcbdf2a.png">
 
 ---
+
+- Added Sign something scenario for crypto exchanges.
+
+<img width="411" alt="image" src="https://user-images.githubusercontent.com/5277080/166238264-1ba0c080-b9e9-4624-98e9-c0a2b0c1334f.png">
+
+
+
 
 # How to bulid
 
