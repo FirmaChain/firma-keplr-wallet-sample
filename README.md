@@ -13,6 +13,12 @@ If you click "Connect", you can see the confirm page to add colosseum-1 mainnet 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5277080/163519063-361c2298-5649-469f-b9da-75a60e350789.png">
 
 
+When the kepler app is trying to connect wallet first, you can see the "Requesting connection" confirm page.
+
+![image](https://user-images.githubusercontent.com/5277080/169422773-852285d2-2f34-4073-94d5-dd1958649610.png)
+
+
+
 After succeed to connect, you can see firmachain info on the chain selection tab.
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5277080/163519146-020818c3-8a4d-4487-9ec4-03922bcbdf2a.png">
