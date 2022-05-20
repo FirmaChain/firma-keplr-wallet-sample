@@ -123,27 +123,17 @@ const App = () => {
 
     try {
 
-      var os = require( 'os' );
-
-var networkInterfaces = os.networkInterfaces( );
-
-console.log( networkInterfaces );
 
       await window.keplr.enable(chainId);
 
       const result1 = await window.keplr.getKey(chainId);
       let address = result1.bech32Address;
 
-      var os = require("os");
-var hostname = os.hostname();
-
       // you can also get address below code.
 
       //const offlineSigner = window.getOfflineSigner(chainId);
       //const accounts = await offlineSigner.getAccounts();
       //const addressBasedAccount = accounts[0].address;
-
-      
 
       const rawCertificate = "3936a4db-1d18-4cb6-8274-bccb1541f021";
 
