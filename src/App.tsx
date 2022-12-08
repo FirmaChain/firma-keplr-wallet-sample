@@ -42,6 +42,7 @@ const App = () => {
       await window.keplr.experimentalSuggestChain({
         chainId: "colosseum-1",
         chainName: "FirmaChain",
+        chainSymbolImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/firmachain/chain.png",
         rpc: "https://lcd-mainnet.firmachain.dev:26657/",
         rest: "https://lcd-mainnet.firmachain.dev:1317/",
         bip44: {
@@ -69,7 +70,12 @@ const App = () => {
             coinMinimalDenom: "ufct",
             coinDecimals: 6,
             coinGeckoId: "firmachain",
-          },
+            gasPriceStep: {
+              low: 0.1,
+              average: 0.25,
+              high: 0.3
+            }
+          }
         ],
         stakeCurrency: {
           coinDenom: "FCT",
@@ -77,12 +83,7 @@ const App = () => {
           coinDecimals: 6,
           coinGeckoId: "firmachain",
         },
-        coinType: 7777777,
-        gasPriceStep: {
-          low: 0.1,
-          average: 0.25,
-          high: 0.3,
-        },
+        "features": []
       });
 
       // If experimentalSuggestChain method runs well, below alert will be called.
