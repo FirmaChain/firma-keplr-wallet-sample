@@ -42,7 +42,7 @@ const App = () => {
       await window.keplr.experimentalSuggestChain({
         chainId: "colosseum-1",
         chainName: "FirmaChain",
-        chainSymbolImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/firmachain/chain.png",
+        chainSymbolImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/colosseum/chain.png",
         rpc: "https://lcd-mainnet.firmachain.dev:26657/",
         rest: "https://lcd-mainnet.firmachain.dev:1317/",
         bip44: {
